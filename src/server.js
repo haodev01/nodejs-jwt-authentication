@@ -34,7 +34,7 @@ const START_SERVER = () => {
   const LOCAL_DEV_APP_HOST =
     'https://nodejs-jwt-authentication-e5ku.onrender.com'
   const AUTHOR = 'TrungQuanDev'
-  app.listen(port, LOCAL_DEV_APP_HOST, () => {
+  app.listen(port, () => {
     console.log(
       `Local DEV: Hello ${AUTHOR}, Back-end Server is running successfully at Host: ${LOCAL_DEV_APP_HOST} and Port: ${port}`,
     )
