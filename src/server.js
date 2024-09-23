@@ -30,15 +30,17 @@ const START_SERVER = () => {
   app.use('/v1', APIs_V1)
 
   // Should be store to env in the actual product: check here: https://youtu.be/Vgr3MWb7aOw
-  const LOCAL_DEV_APP_PORT = 8017
+  const port = process.env.PORT || 8107
   const LOCAL_DEV_APP_HOST = 'localhost'
   const AUTHOR = 'TrungQuanDev'
-  app.listen(LOCAL_DEV_APP_PORT, LOCAL_DEV_APP_HOST, () => {
-    console.log(`Local DEV: Hello ${AUTHOR}, Back-end Server is running successfully at Host: ${LOCAL_DEV_APP_HOST} and Port: ${LOCAL_DEV_APP_PORT}`)
+  app.listen(port, LOCAL_DEV_APP_HOST, () => {
+    console.log(
+      `Local DEV: Hello ${AUTHOR}, Back-end Server is running successfully at Host: ${LOCAL_DEV_APP_HOST} and Port: ${port}`,
+    )
   })
 }
 
-(async () => {
+;(async () => {
   try {
     // Start Back-end Server
     console.log('Starting Server...')
