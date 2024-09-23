@@ -31,7 +31,8 @@ const START_SERVER = () => {
 
   // Should be store to env in the actual product: check here: https://youtu.be/Vgr3MWb7aOw
   const port = process.env.PORT || 8107
-  const LOCAL_DEV_APP_HOST = 'localhost'
+  const LOCAL_DEV_APP_HOST =
+    'https://nodejs-jwt-authentication-e5ku.onrender.com'
   const AUTHOR = 'TrungQuanDev'
   app.listen(port, LOCAL_DEV_APP_HOST, () => {
     console.log(
